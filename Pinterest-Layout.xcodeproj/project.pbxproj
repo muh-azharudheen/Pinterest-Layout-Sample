@@ -14,6 +14,7 @@
 		22D0B8A11FE653BF00FEFA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D0B89F1FE653BF00FEFA60 /* LaunchScreen.storyboard */; };
 		22D0B8AA1FE6587400FEFA60 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0B8A91FE6587400FEFA60 /* Post.swift */; };
 		22D0B8AE1FE65E9D00FEFA60 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0B8AD1FE65E9D00FEFA60 /* PostCell.swift */; };
+		22D0B8B11FE6654E00FEFA60 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0B8B01FE6654E00FEFA60 /* PinterestLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		22D0B8A21FE653BF00FEFA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D0B8A91FE6587400FEFA60 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		22D0B8AD1FE65E9D00FEFA60 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		22D0B8B01FE6654E00FEFA60 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		22D0B8951FE653BF00FEFA60 /* Pinterest-Layout */ = {
 			isa = PBXGroup;
 			children = (
+				22D0B8AF1FE6652D00FEFA60 /* Layout */,
 				22D0B8961FE653BF00FEFA60 /* AppDelegate.swift */,
 				22D0B8AC1FE658E000FEFA60 /* View */,
 				22D0B8AB1FE658D500FEFA60 /* Controller */,
@@ -92,6 +95,14 @@
 				22D0B8AD1FE65E9D00FEFA60 /* PostCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		22D0B8AF1FE6652D00FEFA60 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				22D0B8B01FE6654E00FEFA60 /* PinterestLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D0B8B11FE6654E00FEFA60 /* PinterestLayout.swift in Sources */,
 				22D0B8AA1FE6587400FEFA60 /* Post.swift in Sources */,
 				22D0B8991FE653BF00FEFA60 /* PinterestController.swift in Sources */,
 				22D0B8971FE653BF00FEFA60 /* AppDelegate.swift in Sources */,

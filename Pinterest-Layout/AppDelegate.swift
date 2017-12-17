@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barStyle = .black
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = PinterestController(collectionViewLayout: UICollectionViewFlowLayout())
+        let layout = PinterestLayout()
+        let vc = PinterestController(collectionViewLayout: layout)
         let navigationController = UINavigationController(rootViewController: vc)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

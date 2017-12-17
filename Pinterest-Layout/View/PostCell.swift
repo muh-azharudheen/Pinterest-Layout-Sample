@@ -49,7 +49,7 @@ class PostCell: BaseCell{
         return lbl
     }()
     
-    
+    private var imageHeightConstraint: NSLayoutConstraint?
     
     var post: Post!{
         didSet{
@@ -65,11 +65,13 @@ class PostCell: BaseCell{
         addSubview(usernameLabel)
         addSubview(timeAgoLabel)
         
+        imageHeightConstraint = postImageView.heightAnchor.constraint(equalToConstant: 200)
+        
         NSLayoutConstraint.activate([
             postImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             postImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             postImageView.topAnchor.constraint(equalTo: topAnchor),
-            postImageView.heightAnchor.constraint(equalToConstant: 200)
+            imageHeightConstraint!
             ])
         
         NSLayoutConstraint.activate([
@@ -78,6 +80,8 @@ class PostCell: BaseCell{
             captionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
             captionLabel.bottomAnchor.constraint(equalTo: profileImageView.topAnchor, constant: -8)
             ])
+        
+        
         
         NSLayoutConstraint.activate([
             profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
@@ -107,6 +111,16 @@ class PostCell: BaseCell{
         captionLabel.text = post.caption
         postImageView.image = post.image
         
+    }
+    
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        
+        if let attributes = layoutAttributes as? PinterestLayoutAttributes {
+            // change the image height
+            imageHeightConstraint?.constant = attributes.photoHeight
+            layoutIfNeeded()
+        }
     }
 }
 
